@@ -14,8 +14,7 @@ st.set_page_config(
 )
 hide_st(st)
 if check_password(st):
-    add_new = st.button("Add new connection")
-    if add_new:
+    if add_new := st.button("Add new connection"):
         CONFIG.forwards.append(Forward())
         write_config(CONFIG)
 
